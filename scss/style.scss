@@ -1,0 +1,134 @@
+// Normalize
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter Tight", sans-serif;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+// Variables
+
+/// Fuentes
+
+$font-size-h1: 2rem;
+$font-size-h3: 1.25rem;
+$font-size-h4: 1rem;
+$font-size-p: 0.85rem;
+
+/// Colores
+
+$color-dark100: #e2e5e1;
+$color-dark200: #a9b0a6;
+$color-dark300: #707a6c;
+$color-dark400: #3a3f37;
+$color-dark500: #1e211d;
+$color-dark600: #131512;
+$color-primary400: #b7df9f;
+$color-primary500: #6fbf40;
+$color-primary600: #538f30;
+
+// Layout
+
+$border-rad: 5px;
+
+// body
+
+body {
+  background-color: $color-dark100;
+}
+// Sección
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  margin-top: 10%;
+}
+
+// Tab contenedor
+
+.tabs_container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.tab_container {
+  padding: 0.5rem 0;
+  width: 100%;
+  text-align: center;
+}
+
+.tab {
+  font-size: $font-size-h4;
+  font-weight: 400;
+  color: $color-dark400;
+}
+
+// Informacion
+
+.info {
+  &_container {
+    background-color: #fafafa;
+    border-bottom-left-radius: $border-rad;
+    border-bottom-right-radius: $border-rad;
+    border: 1px solid $color-dark100;
+    padding: 2rem 2rem 1rem;
+    column-count: 2;
+    column-gap: 2rem;
+    position: relative;
+  }
+
+  &_title {
+    font-size: $font-size-h3;
+    color: $color-dark600;
+    font-weight: 700;
+    line-height: 1.4;
+  }
+  &_p {
+    font-size: $font-size-p;
+    font-weight: 400;
+    color: $color-dark500;
+    line-height: 1.4;
+    margin: 3rem 0 5rem;
+  }
+  &_sign {
+    font-size: $font-size-p;
+    font-weight: 300;
+    color: $color-dark500;
+    line-height: 1.4;
+    position: absolute;
+    right: 2rem;
+    bottom: 1rem;
+  }
+}
+
+// Clases adicionales
+
+.active {
+  // border: 1px solid $color-dark100;
+  border-bottom: 3px solid $color-primary600;
+  color: $color-primary600;
+}
